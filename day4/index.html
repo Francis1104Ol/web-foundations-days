@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickNotes - Editor Engine</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>QuickNotes Editor</h1>
+      <button id="theme-toggle">Dark mode</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="editor-card">
+      <label for="note-text" class="editor-label">Draft your note:</label>
+      <textarea id="note-text" placeholder="Start typing your note ideas here..."></textarea>
+      
+      <div class="metrics-row">
+        <p id="char-count">0 / 200 characters</p>
+        <p id="word-count">0 words</p>
+      </div>
+
+      <button id="clear-btn" class="danger-btn">Clear Workspace</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+  </footer>
+</body>
+</html>
