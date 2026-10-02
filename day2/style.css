@@ -1,0 +1,218 @@
+/* ==========================================================================
+   1. Reset & Global Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. Header & Navigation Layout (Flexbox)
+   ========================================================================== */
+header {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0 0 1.5rem 0;
+  color: #94a3b8;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+}
+
+/* ==========================================================================
+   3. Main Content & Responsive Card Structure
+   ========================================================================== */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card h2, 
+.card h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   4. Features List Layout (CSS Grid Cards)
+   ========================================================================== */
+ul.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0 0;
+}
+
+ul.features li {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   5. Tables & Shortcuts
+   ========================================================================== */
+.shortcuts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.shortcuts-table th,
+.shortcuts-table td {
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.shortcuts-table th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+kbd {
+  background-color: #e2e8f0;
+  border-radius: 3px;
+  border: 1px solid #cbd5e1;
+  padding: 0.1rem 0.4rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. Form Layouts & Inputs (Stacked & Fluid)
+   ========================================================================== */
+.stacked-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stacked-form label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.stacked-form input[type="text"],
+.stacked-form input[type="email"],
+.stacked-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.stacked-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ==========================================================================
+   7. Buttons & Micro-interactions (Transitions)
+   ========================================================================== */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   8. Footer Formatting
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   9. Responsive Adaptation (Mobile Breakdown Layout)
+   ========================================================================== */
+@media (max-width: 600px) {
+  header {
+    padding: 1.5rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
