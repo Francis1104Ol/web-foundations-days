@@ -1,0 +1,7 @@
+# Course Engineering Reflection and Horizon Review
+
+The most challenging engineering concept I encountered during this course was mastering data consistency models across distributed systems, specifically balancing high throughput against strict referential integrity within intermediate tables. Converting complex physical relationships into high-integrity one-to-many paths using localized indexing felt challenging initially, as it required shifting away from standard monolithic structures. I overcame this by building clear entity models on paper, systematically tracing how foreign keys propagate across execution tables, and using SQLite playgrounds to verify constraint behaviors step-by-step under mock race conditions.
+
+Based on peer reviews and capstone feedback, I want to improve my architecture models by adding automated caching invalidation pipelines, like utilizing Redis Pub/Sub mechanisms to handle distributed data synchronization. My initial designs focused heavily on database integrity checks, occasionally overlooking the edge-case latency spikes that occur when multiple application server nodes look up unindexed keys simultaneously.
+
+Moving forward, I plan to dive deep into containerization technologies, specifically mastering Docker runtime configurations and Kubernetes orchestration matrices. Learning to package modular application microservices into isolated, highly scalable containers will allow me to build resilient backend systems that can adapt dynamically to production environments.
